@@ -21,15 +21,15 @@ body {
 
   }
 
-  h1, h3 {
+  .home h1, h3 {
     color: aliceblue;
   }
 
-  h1 {
+  .home h1 {
     font-size: 30px;
   }
 
-  h3 {
+  .home h3 {
     font-size: 20px;
   }
 
@@ -92,20 +92,27 @@ body {
 
      background-color: black;
     
-    padding-bottom: 12.5rem; /* era 200 px alterei para 12.5 rem, verificar a questão da flexibilidade */
-    padding-top: 6.25rem; /* era 100 px alterei para 6.25 rem, verificar a questão da flexibilidade */
-    padding-right: 5rem;
-    padding-left: 5rem;
+    padding-bottom: 200px; 
+    padding-top: 200px;
+    padding-right: 200px;
+    padding-left: 200px;
+    gap: 100px;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+
 
   }
 
   .mei img{
     width: 100%;
     height: auto;
+  }
+
+  .mei h1 {
+    color: #fff;
   }
 
   /*lista*/
@@ -188,6 +195,7 @@ body {
 
   .garantia h1 {
     font-size: 20px;
+    color: #fff;
   }
 
   .garantia h2 {
@@ -195,4 +203,202 @@ body {
     color: #fff;
   }
 
+
+  .divulgacao {
+    background-color: #070707;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+
+    padding-left: 300px;
+    padding-right: 300px;
+
+    padding-bottom: 200px;
+    padding-top: 200px;
+  }
+
+  .divulgacao img {
+    width: 22rem;
+    height: auto;
+  }
  
+  .divulgacao h2, p{
+    color: #fff;
+  }
+
+  .divulgacao h2 {
+    font-size: 30px;
+  }
+
+ .text-dispositivos {
+  padding-top: 200px;
+  background-color: black;
+  display: flex;
+  text-align: center;
+    align-items: center;
+    justify-content: center;
+ }
+
+  .text-dispositivos h2 {
+        font-size: 30px;
+    color: #fff;
+  }
+
+.dispositivos {
+  display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    gap: 40px;
+
+    padding-bottom: 200px;
+}
+
+.dispositivos h2, h3 {
+    color: #fff;
+}
+
+.chamado {
+  display: flex;
+  text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #070707;
+    gap: 100px;
+
+    padding-left: 200px;
+    padding-right: 200px;
+
+    padding-bottom: 200px;
+    padding-top: 200px;
+}
+
+.chamado h2, p{
+  color: #fff;
+}
+
+.chamado p {
+  font-size: 15px;
+}
+
+.chamado h2 {
+  font-size: 30px;
+}
+
+.chamado img{
+  width: 20rem;
+    height: auto;
+}
+
+.baixe {
+  display: flex;
+  text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #070707;
+    gap: 100px;
+
+    padding-left: 200px;
+    padding-right: 200px;
+
+    padding-bottom: 200px;
+    padding-top: 200px;
+}
+
+.baixe img {
+   width: 20rem;
+    height: auto;
+}
+ .baixe h2, p{
+    color: #fff;
+ }
+
+ .baixe h2 {
+    font-size: 40px;
+ }
+
+ .baixe p {
+  font-size: 15px;
+ }
+
+ @media (max-width: 768px) {
+
+  .home, .books, .meio, .divulgacao, .chamado, .baixe {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .start img,
+  .books img,
+  .divulgacao img,
+  .chamado img,
+  .baixe img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container-images {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .garantia {
+    flex-direction: column;
+    padding: 4rem 1rem;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .garantia h1 {
+    font-size: 18px;
+  }
+
+  .garantia h2 {
+    font-size: 14px;
+  }
+
+  .divulgacao, .chamado, .baixe {
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .divulgacao h2, .chamado h2, .baixe h2 {
+    font-size: 24px;
+  }
+
+  .baixe h2 {
+    font-size: 28px;
+  }
+
+  .dispositivos {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 1rem;
+  }
+
+  .text-dispositivos {
+    padding-top: 3rem;
+  }
+
+  .text-dispositivos h2 {
+    font-size: 24px;
+  }
+
+  .home h1 {
+    font-size: 24px;
+  }
+
+  .home h3 {
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+}
