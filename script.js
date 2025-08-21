@@ -1,3 +1,4 @@
+// ---------------------- SLIDER ----------------------
 const slider = document.querySelectorAll('.slider');
 const btnPrev = document.getElementById('prev-button');
 const btnNext = document.getElementById('next-button');
@@ -5,32 +6,39 @@ const btnNext = document.getElementById('next-button');
 let currentSlide = 0;
 
 function hideSlider() {
-  slider.forEach(item => item.classList.remove('on'))
+  slider.forEach(item => item.classList.remove('on'));
 }
 
 function showSlider() {
-  slider[currentSlide].classList.add('on')
+  slider[currentSlide].classList.add('on');
 }
 
 function nextSlider() {
-  hideSlider()
-  if(currentSlide === slider.length -1) {
-    currentSlide = 0
-  } else {
-    currentSlide++
-  }
-  showSlider()
+  hideSlider();
+  currentSlide = (currentSlide + 1) % slider.length;
+  showSlider();
 }
 
 function prevSlider() {
-  hideSlider()
-  if(currentSlide === 0) {
-    currentSlide = slider.length -1
-  } else {
-    currentSlide--
-  }
-  showSlider()
+  hideSlider();
+  currentSlide = (currentSlide - 1 + slider.length) % slider.length;
+  showSlider();
 }
 
-btnNext.addEventListener('click', nextSlider)
-btnPrev.addEventListener('click', prevSlider)
+if(btnNext) btnNext.addEventListener('click', nextSlider);
+if(btnPrev) btnPrev.addEventListener('click', prevSlider);
+
+// ---------------------- SCROLL SUAVE ----------------------
+const destino = document.getElementById("btn-duvidas");
+
+// todos os botões/links que devem rolar
+const botoesScroll = document.querySelectorAll(".scroll-btn");
+
+botoesScroll.forEach(botao => {
+  botao.addEventListener("click", (e) => {
+    e.preventDefault();
+    if(destino){
+      destino.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+});
