@@ -5,6 +5,10 @@ body {
     font-family: "DM Sans", sans-serif;
   }
 
+  body {
+  background-color: #000; /* deixa o fundo preto no site todo */
+}
+
 
   html {
   scroll-behavior: smooth;
@@ -12,7 +16,6 @@ body {
 
 
   .home {
-
 
     background-color: black;
    
@@ -37,6 +40,8 @@ body {
 
 
   .home h1 {
+    padding-top: 2rem;
+    margin-top: 0;
     font-size: 30px;
   }
 
@@ -47,7 +52,7 @@ body {
 
 
   .destaque {
-    color: #45a049;
+    color: rgb(69, 160, 73);
   }
 
 
@@ -55,36 +60,116 @@ body {
     width: 400px;
     height: auto;
   }
+.bloco {
+  position: relative; 
+  display: inline-block; /* pra ocupar só o necessário */
+} 
+.aprovacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0 auto 0px auto; /* centraliza horizontal */
+  max-width: 280px; /* largura máxima, menor que o botão verde */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
 
+.aprovacao:hover {
+  background-color: #ff4500; 
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  transform: translateY(-2px);
+}
+
+.aprovacao .icone {
+  margin-right: 8px;
+  color: #ff5722;
+  font-size: 18px;
+}
+
+.bloco2 {
+  position: relative; 
+  display: inline-block; /* pra ocupar só o necessário */
+} 
+.preço {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0 auto 0px auto; /* centraliza horizontal */
+  max-width: 280px; /* largura máxima, menor que o botão verde */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+.preço .detalhe {
+    display: block; /* força a quebra */
+    width: 100%; /* garante que ocupe toda a largura */
+    font-size: 14px;
+    color: #ffcc00;
+    margin-top: 5px;
+}
+
+.preço:hover {
+  background-color: #45a049;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  transform: translateY(-2px);
+}
+
+.preço .icone {
+  margin-right: 8px;
+  color: #45a049;
+  font-size: 18px;
+}
 
   /*Butão*/
 
+  /* Centralizar o botão */
+.btn-container {
+  text-align: center;
+  margin-top: 40px;
+}
 
-  .butão {
-     background-color: black;
-     display: flex;
-    align-items: center;
-    justify-content: center;
+/* Estilo do botão */
+.cta-btn {
+  background: linear-gradient(135deg, #34974b, #1d8334);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px 36px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
 
+/* Efeito ao passar o mouse */
+.btn-container:hover {
+  background: linear-gradient(135deg, #010703, #010703);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+}
 
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+/* Efeito ao clicar */
+.cta-btn:active {
+  transform: scale(0.97);
   }
-
-
-  button {
-    padding: 20px 30px;         /* Espaçamento do botão */
-    border: none;               /* Remove borda */
-    background-color: #4CAF50;  /* Cor do fundo */
-    color: white;               /* Cor do texto */
-    cursor: pointer;            /* Aponta o cursor para indicar ação */
-    border-radius: 5px;         /* Bordas arredondadas no botão */
-  }
- 
-  button:hover {
-    background-color: #45a049;  /* Cor do fundo ao passar o mouse */
-  }
-
 
   /*books*/
 
@@ -161,43 +246,6 @@ body {
   .titulolista h1 {
     color: aliceblue;
   }
-
-
-  /*slides*/
-
-
-  .container-slider {
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  background-color: rgb(0, 0, 0);
-}
-
-
-.container-images {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 700px;
-}
-
-
-.slider {
-  opacity: 0;
-  transition: opacity .2s;
-  position: absolute;
-  width: 100%;
-  border-radius: 10px;
-}
-
-
-.on {
-  opacity: 1;
-}
 
 
 #prev-button, #next-button {
@@ -360,41 +408,96 @@ body {
 
 .baixe {
   display: flex;
-  text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: #070707;
-    gap: 50px;
-
-
-    padding-left: 200px;
-    padding-right: 200px;
-
-
-    padding-bottom: 100px;
-    padding-top: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #070707;
+  gap: 60px;
+  padding: 80px 10%;
+  flex-wrap: wrap; /* deixa responsivo */
 }
 
-
-.baixe img {
-   width: 20rem;
-    height: auto;
+.ebook-img img {
+  width: 22rem;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  transition: transform 0.3s;
 }
- .baixe h2, p{
-    color: #fff;
- }
 
+.ebook-img img:hover {
+  transform: scale(1.05);
+}
 
- .baixe h2 {
-    font-size: 45px;
- }
+.texto {
+  max-width: 520px;
+  color: #fff;
+  text-align: left;
+}
 
+.texto h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #ff3b3b;
+  line-height: 1.2;
+}
 
- .baixe p {
+.texto p {
+  font-size: 18px;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.texto p strong {
+  color: #ff5a5a;
+}
+
+.btn-comprar {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 32px;
+  background: linear-gradient(45deg, #ff0000, #ff5a5a);
+  color: #fff;
   font-size: 20px;
- }
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+}
 
+.btn-comprar:hover {
+  background: linear-gradient(45deg, #ff5a5a, #ff0000);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
+  text-decoration: none; 
+}
 
+/* Responsividade */
+@media (max-width: 768px) {
+  .baixe {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 60px 5%;
+  }
+
+  .texto {
+    text-align: center;
+  }
+
+  .texto h2 {
+    font-size: 32px;
+  }
+
+  .texto p {
+    font-size: 16px;
+  }
+
+  .btn-comprar {
+    font-size: 18px;
+    padding: 12px 28px;
+  }
+}
  @media (max-width: 768px) {
 
 
@@ -533,3 +636,79 @@ body {
   }
 }
 
+/* Estilo da Tabela de Preço */
+.preco-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.card-preco {
+  border: 2px solid #27ae60;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 320px;
+  text-align: center;
+  background: #050101;
+  box-shadow: 0 4px 10px rgba(235, 228, 228, 0.1);
+}
+
+.card-preco h2 {
+  font-size: 30px;
+  color: #27ae60;
+  margin-bottom: 05px;
+  
+}
+
+
+.card-preco .preco {
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff0000;
+  line-height: 0;
+  margin-bottom: 0px;
+}
+
+.card-preco .preco1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #27ae60;
+  line-height: 0,5;
+  margin-bottom: 0px;
+}
+
+.card-preco ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-preco ul li {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #27ae60;
+}
+
+.card-preco a.btn-duvidas {
+  display: inline-block; /* faz o link se comportar como botão */
+  margin-top: 20px;
+  background: #27ae60;
+  color: #fff;
+  text-decoration: none; /* tira o sublinhado */
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card-preco a.btn-duvidas:hover {  
+  background: #219150;
+}
+
+/* Efeito ao passar o mouse na tabela */
+.card-preco a.btn-duvidas:hover {
+  background: linear-gradient(200deg, #34d058, #28a745);
+  transform: translateY(-3px) scale(1,1);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.35);
+}
